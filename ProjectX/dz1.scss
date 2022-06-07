@@ -1,0 +1,119 @@
+.container-fluid {  
+    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    grid-template-columns: 0.3fr 1.5fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "sidebar content content"
+      "sidebar content content"
+      "footer footer footer"
+    }
+
+    header { 
+    grid-area: header;
+    background-size: cover;
+    background-image: url(https://proprikol.ru/wp-content/uploads/2019/08/kartinki-na-zadnij-fon-38.jpg);
+    height: 150px;
+    display: flex;
+    box-sizing: border-box;
+        .logo { 
+            transform: rotate(355deg);
+            img {
+            height: 150px;
+            width: 150px;
+            border: 5px solid rgb(0, 0, 0);
+            }
+        }
+        nav{
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            ul{
+                height: 100%;
+                display: flex;
+                list-style: none;
+                padding: 0%;
+                margin: 0%;
+                align-items: center;
+                color: #ffffff;
+                font-size: 50px;
+                li{
+                    font-family: fantasy;
+                    margin-left: auto;
+                    margin-right: auto;
+                    text-shadow: 5px 8px 0px rgb(0, 0, 0), 0 0 1em red, 0 0 1em red;
+                    transition: 5s;
+                    &:hover{
+                        transform: skew(180deg);
+                        transition: 5s;
+                    }
+                }
+            }
+        }
+        
+    
+    }   
+    sidebar {
+    grid-area: sidebar;
+    display: grid;
+    box-sizing: border-box;
+    button{
+        width: 80%;
+    }
+    }
+  
+    content { 
+        grid-area: content;
+        display: block;
+        width: 800px;
+        position: relative;
+        margin: auto;
+        padding: 0 20px
+    div,code{
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        font-size: 15px}
+    code{color: #A24442}
+    .ex{
+        background-color: #E7E7E7;
+        padding: 10px 0 10px 30px}
+    h1,h2{
+        text-align: center}
+    h4{
+        display: inline}
+    .bold{
+        font-weight: bold}
+    abbr{
+         text-decoration: 1px underline dotted;
+         cursor: help;
+         position: relative}
+    abbr:hover{
+        color: red}
+    abbr:hover::after{
+        content: "HyperText Markup Language";
+        color: black;
+        position: absolute; 
+        left: 0; top: 35px;
+        z-index: 1; 
+        background: rgba(255,255,230,0.9); 
+        font-family: Arial, sans-serif; 
+        font-size: 11px;
+        font-weight: normal;
+        padding: 5px 10px; 
+        border: 1px solid #333}
+    .footer  span{
+        color: #6EAEB3;
+        background-color: #DCDCDC;}
+    .tags{
+        font-weight: bold;}
+    }
+
+    footer {
+        grid-area: footer;
+        box-sizing: border-box;
+        height: 150px;
+        background-size: cover;
+        background-image: url(https://proprikol.ru/wp-content/uploads/2019/08/kartinki-na-zadnij-fon-38.jpg);
+    }
